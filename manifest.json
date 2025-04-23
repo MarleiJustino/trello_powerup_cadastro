@@ -1,7 +1,7 @@
 {
   "name": "Cadastro de Clientes",
   "description": "Um Power-Up para gerenciar fichas de cadastro de clientes.",
-  "author": "JAS Correspondente Bancário",
+  "author": "Marlei Justino",
   "capabilities": {
     "card-buttons": [
       {
@@ -11,10 +11,10 @@
     ],
     "card-back-section": {
       "title": "Cadastro de Cliente",
-      "icon": "https://MarleiJustino.github.io/trello_powerup_cadastro/icone-powerup.png",
+      "icon": "https://marleijustino.github.io/trello_powerup_cadastro/icone-powerup.png",
       "content": {
         "type": "iframe",
-        "url": "https://MarleiJustino.github.io/trello_powerup_cadastro/cadastro-clientes.html",
+        "url": "https://marleijustino.github.io/trello_powerup_cadastro/cadastro-clientes.html",
         "height": 500
       }
     }
