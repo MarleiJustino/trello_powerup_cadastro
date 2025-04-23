@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Clientes</title>
+  <script src="https://p.trellocdn.com/power-up.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ficha de Cadastro de Cliente</h1>
+
+  <form id="clienteForm">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="telefone">Telefone:</label>
+    <input type="tel" id="telefone" name="telefone" required>
+
+    <label for="dataNascimento">Data de Nascimento:</label>
+    <input type="date" id="dataNascimento" name="dataNascimento" required>
+
+    <label for="renda">Renda (R$):</label>
+    <input type="number" id="renda" name="renda" required>
+
+    <label for="unidade">Unidade:</label>
+    <input type="text" id="unidade" name="unidade" required>
+
+    <label for="valorAvaliacao">Valor de Avaliação (R$):</label>
+    <input type="number" id="valorAvaliacao" name="valorAvaliacao" required>
+
+    <label for="valorFinanciamento">Valor de Financiamento (R$):</label>
+    <input type="number" id="valorFinanciamento" name="valorFinanciamento" required>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <p id="mensagemSucesso" class="hidden">Cadastro enviado com sucesso!</p>
+
+  <script>
+    const t = window.TrelloPowerUp.iframe();
+
+    document.getElementById('clienteForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const dados = {
+        nome: document.getElementById('nome').value,
+        email: document.getElementById('email').value,
+        telefone: document.getElementById('telefone').value,
+        dataNascimento: document.getElementById('dataNascimento').value,
+        renda: document.getElementById('renda').value,
+        unidade: document.getElementById('unidade').value,
+        valorAvaliacao: document.getElementById('valorAvaliacao').value,
+        valorFinanciamento: document.getElementById('valorFinanciamento').value
+      };
+
+      t.set('card', 'shared', 'dadosCliente', dados)
+        .then(() => {
+          alert('Cadastro enviado com sucesso!');
+          document.getElementById('clienteForm').reset();
+          document.getElementById('mensagemSucesso').classList.remove('hidden');
+        })
+        .catch((error) => {
+          console.error('Erro ao salvar os dados:', error);
+          alert('Ocorreu um erro ao enviar o cadastro. Por favor, tente novamente.');
+        });
+    });
+  </script>
+</body>
+</html>
