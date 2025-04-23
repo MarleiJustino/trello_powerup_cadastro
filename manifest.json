@@ -1,0 +1,19 @@
+{
+  "name": "Cadastro de Clientes",
+  "description": "Ficha de cadastro de clientes para financiamento",
+  "author": "Marlei Justino",
+  "version": "1.0",
+  "icons": {
+    "48": "https://stalwart-strudel-8b9cf2.netlify.app/icon.png"
+  },
+  "capabilities": {
+    "card-buttons": [
+      {
+        "text": "Cadastrar Cliente",
+        "callback": "abrirFormulario"
+      }
+    ]
+  },
+  "connectors": {},
+  "appKey": "SUA_APP_KEY"
+}
