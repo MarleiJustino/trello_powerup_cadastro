@@ -1,24 +1,24 @@
 {
-  "id": "power-up-id",
   "name": "Cadastro de Clientes",
-  "description": "Um Power-Up para gerenciar fichas de cadastro de clientes.",
-  "categories": ["productivity"],
+  "description": "Ficha de cadastro de clientes para financiamento",
+  "author": "Marlei Justino",
+  "version": "1.0",
+  "icons": {
+    "48": "https://stalwart-strudel-8b9cf2.netlify.app/icon.png"
+  },
   "capabilities": {
-    "card-back-section": {
-      "icon": "https://stalwart-strudel-8b9cf2.netlify.app/icone-powerup.png",
-      "title": "Cadastro de Cliente",
-      "callback": "carregarFormulario"
+    "card-buttons": [
+      {
+        "text": "Cadastrar Cliente",
+        "callback": "abrirFormulario"
+      }
+    ],
+    "iframe": {
+      "url": "https://stalwart-strudel-8b9cf2.netlify.app/index.html",
+      "height": 600
     }
   },
-  "card-buttons": [
-    {
-      "text": "Abrir Ficha",
-      "callback": "showFicha"
-    }
-  ],
-  "connectors": {
-    "iframe": {
-      "url": "https://stalwart-strudel-8b9cf2.netlify.app/cadastro-clientes.html"
-    }
-  }
+  "connectors": {},
+  "appKey": "suaAppKeyAqui",
+  "iframeConnectorUrl": "https://stalwart-strudel-8b9cf2.netlify.app/index.html"
 }
