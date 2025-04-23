@@ -7,12 +7,7 @@
     "48": "https://stalwart-strudel-8b9cf2.netlify.app/icon.png"
   },
   "capabilities": {
-    "card-buttons": [
-      {
-        "text": "Cadastrar Cliente",
-        "callback": "abrirFormulario"
-      }
-    ],
+    "card-buttons": {},
     "iframe": {
       "url": "https://stalwart-strudel-8b9cf2.netlify.app/index.html",
       "height": 600
