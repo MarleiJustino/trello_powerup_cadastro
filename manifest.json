@@ -1,22 +1,24 @@
 {
+  "id": "power-up-id",
   "name": "Cadastro de Clientes",
   "description": "Um Power-Up para gerenciar fichas de cadastro de clientes.",
-  "author": "Marlei Justino",
+  "categories": ["productivity"],
   "capabilities": {
-    "card-buttons": [
-      {
-        "text": "Abrir Ficha",
-        "callback": "showFicha"
-      }
-    ],
     "card-back-section": {
+      "icon": "https://stalwart-strudel-8b9cf2.netlify.app/icone-powerup.png",
       "title": "Cadastro de Cliente",
-      "icon": "https://marleijustino.github.io/trello_powerup_cadastro/icone-powerup.png",
-      "content": {
-        "type": "iframe",
-        "url": "https://marleijustino.github.io/trello_powerup_cadastro/cadastro-clientes.html",
-        "height": 500
-      }
+      "callback": "carregarFormulario"
+    }
+  },
+  "card-buttons": [
+    {
+      "text": "Abrir Ficha",
+      "callback": "showFicha"
+    }
+  ],
+  "connectors": {
+    "iframe": {
+      "url": "https://stalwart-strudel-8b9cf2.netlify.app/cadastro-clientes.html"
     }
   }
 }
